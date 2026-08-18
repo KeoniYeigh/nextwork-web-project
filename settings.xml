@@ -1,0 +1,31 @@
+<settings>
+<servers>
+  <server>
+    <id>keoniprojects-nextwork-CICD-project</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<profiles>
+  <profile>
+    <id>keoniprojects-nextwork-CICD-project</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>keoniprojects-nextwork-CICD-project</id>
+        <url>https://keoniprojects-nextwork-263649229055.d.codeartifact.ap-southeast-2.amazonaws.com/maven/CICD-project/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<mirrors>
+  <mirror>
+    <id>keoniprojects-nextwork-CICD-project</id>
+    <name>keoniprojects-nextwork-CICD-project</name>
+    <url>https://keoniprojects-nextwork-263649229055.d.codeartifact.ap-southeast-2.amazonaws.com/maven/CICD-project/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
